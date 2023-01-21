@@ -1,0 +1,75 @@
+.topo {
+    background-color: rgba(255, 255, 255, 1);
+    height: 80px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.topo img {
+    width: 75px;
+    height: 53px;
+}
+
+.topo ion-icon {
+    width: 43px;
+    height: 31px;
+}
+
+.mensagens {
+    margin-top: 106px;
+    font-family: Roboto;
+    background-color: blue;
+    height: 40px;
+}
+
+.bottom {
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+.bottom input {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.escrita {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+.enter ion-icon {
+    height: 26px;
+    width: 26px;
+    z-index: 5;
+    bottom: 27px;
+    right: 27px;
+    position: absolute;
+}
