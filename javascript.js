@@ -34,17 +34,17 @@ function chatMensagem(msg){
       if(msg[indice].type === "status"){
           mensagemAdicionada += `
               <li class="mensagem status" data-test="message">
-                  <div><span>( ${msg[indice].time} )</span>  <strong> ${msg[indice].from} </strong>  ${msg[indice].text} </div>
+                  <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong>  ${ msg[indice].text } </div>
               </li>`
       }else if(msg[indice].type === "message"){
           mensagemAdicionada += `
               <li class="mensagem normais" data-test="message">
-                  <div><span>( ${msg[indice].time} )</span>  <strong> ${msg[indice].from} </strong> para <strong> ${msg[indice].to}: </strong>  ${msg[indice].text}</div>
+                  <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong> para <strong> ${ msg[indice].to }: </strong>  ${ msg[indice].text }</div>
               </li>`
       }else if(msg[indice].type === "private_message"){
         mensagemAdicionada += `
             <li class="mensagem reservadas" data-test="message">
-                <div><span>( ${msg[indice].time} )</span>  <strong> ${msg[indice].from} </strong> reservadamente para <strong> ${msg[indice].to}: </strong>  ${msg[indice].text}</div>
+                <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong> reservadamente para <strong> ${ msg[indice].to }: </strong>  ${ msg[indice].text }</div>
             </li>`
     }
   }

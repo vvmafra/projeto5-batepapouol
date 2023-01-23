@@ -59,6 +59,10 @@
     background-color: #DCDCDC;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .normais {
     box-sizing: border-box;
     border: 10px solid #FFFFFF;
