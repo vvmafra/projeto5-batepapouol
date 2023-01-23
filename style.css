@@ -24,11 +24,51 @@
     height: 31px;
 }
 
-.mensagens {
+.chat {
     margin-top: 106px;
+    margin-bottom: 90px;
     font-family: Roboto;
-    background-color: blue;
-    height: 40px;
+    background-color: #F1F1F1;
+    box-sizing: border-box;
+}
+
+.chat li{
+    margin-top: 8px;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 130px;
+}
+
+.chat div{
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+.chat span{
+    color: #AAAAAA
+}
+
+.mensagem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status {
+    box-sizing: border-box;
+    border: 10px solid #DCDCDC;
+    background-color: #DCDCDC;
+}
+
+.normais {
+    box-sizing: border-box;
+    border: 10px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.reservadas {
+    box-sizing: border-box;
+    border: 10px solid #FFDEDE;
+    background-color: #FFDEDE;
 }
 
 .bottom {
@@ -54,6 +94,7 @@
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    color: black;
 }
 
 .escrita {
@@ -65,7 +106,7 @@
     box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.05);
 }
 
-.enter ion-icon {
+.bottom ion-icon {
     height: 26px;
     width: 26px;
     z-index: 5;
