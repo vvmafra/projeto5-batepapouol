@@ -31,20 +31,25 @@ function chatMensagem(msg){
   const localChat = document.querySelector(".chat");
   let mensagemAdicionada = '';
   for(let indice = 0; indice < msg.length; indice++){
-      if(msg[indice].type === "status"){
+    const tipoMsg = msg[indice].type;
+    const tempo = msg[indice].time;
+    const texto = msg[indice].text;
+    const de = msg[indice].from;
+    const para = msg[indice].to;
+      if( tipoMsg === "status"){
           mensagemAdicionada += `
               <li class="mensagem status" data-test="message">
-                  <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong>  ${ msg[indice].text } </div>
+                  <div><span>( ${ tempo } )</span> &nbsp &nbsp &nbsp <strong> ${ de } </strong> &nbsp ${ texto } </div>
               </li>`
-      }else if(msg[indice].type === "message"){
+      }else if( tipoMsg === "message"){
           mensagemAdicionada += `
               <li class="mensagem normais" data-test="message">
-                  <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong> para <strong> ${ msg[indice].to }: </strong>  ${ msg[indice].text }</div>
+                  <div><span>( ${ tempo } )</span> &nbsp &nbsp &nbsp <strong> ${ de } </strong> &nbsp para <strong> ${ para }: </strong> &nbsp ${ texto }</div>
               </li>`
-      }else if(msg[indice].type === "private_message"){
+      }else if( tipoMsg === "private_message"){
         mensagemAdicionada += `
             <li class="mensagem reservadas" data-test="message">
-                <div><span>( ${ msg[indice].time } )</span>  <strong> ${ msg[indice].from } </strong> reservadamente para <strong> ${ msg[indice].to }: </strong>  ${ msg[indice].text }</div>
+                <div><span>( ${ tempo } )</span> &nbsp &nbsp &nbsp <strong> ${ de } </strong> &nbsp reservado para <strong> ${ para }: </strong> &nbsp ${ texto }</div>
             </li>`
     }
   }
@@ -70,8 +75,9 @@ function chatMensagem(msg){
   
   function mensagemEnviada() {
     const mensagemChat = document.querySelector(".bottom input");
+    valorMsg = mensagemChat.value;
     const mensagem = {
-    from: usuario.name, to: "Todos", text: mensagemChat.value, type: "message"
+    from: usuario.name, to: "Todos", text: valorMsg, type: "message"
     }
     mensagemChat.value ="";
     const checkMensagem = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", mensagem);
